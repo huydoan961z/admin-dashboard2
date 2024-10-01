@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="AddDoctor.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" >Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html" class="active">Here doctor</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="patient.html">Here patient</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="service.html">Here service</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <form>
+                    <!-- Section 1: Doctor Information -->
+                    <div class="section space-y-12">
+                        <div class="border-b pb-12">
+                            <h1 class="first-text">Doctor Information</h1>
+                            
+                            <div class="grid">
+                                <!-- ID -->
+                                <div class="col">
+                                    <label for="id">ID</label>
+                                    <input id="id" name="id" type="text" placeholder="Doctor ID">
+                                </div>
+            
+                                <!-- Image -->
+                                <div class="col">
+                                    <label for="photo">Photo</label>
+                                    <div class="flex">
+                                        <div class="user-icon"></div>
+                                        <button type="button" class="change-btn">Change</button>
+                                    </div>
+                                </div>
+            
+                                <!-- First name and Last name -->
+                                <div class="col">
+                                    <label for="first-name">First name</label>
+                                    <input id="first-name" name="first-name" type="text" autocomplete="given-name">
+                                </div>
+            
+                                <div class="col">
+                                    <label for="last-name">Last name</label>
+                                    <input id="last-name" name="last-name" type="text" autocomplete="family-name">
+                                </div>
+            
+                                <!-- Gender and Date of Birth -->
+                                <div class="col">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+            
+                                <div class="col">
+                                    <label for="dob">Date of Birth</label>
+                                    <input id="dob" name="dob" type="date">
+                                </div>
+            
+                                <!-- Address and Phone Number -->
+                                <div class="col">
+                                    <label for="address">Address</label>
+                                    <input id="address" name="address" type="text" placeholder="Doctor's address">
+                                </div>
+            
+                                <div class="col">
+                                    <label for="phone">Phone Number</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="Phone number">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Section 2: Additional Information -->
+                        <div class="border-b pb-12">
+                            <h1 class="first-text">Additional Information</h1>
+            
+                            <div class="grid">
+                                <!-- Position -->
+                                <div class="col">
+                                    <label for="position">Position</label>
+                                    <select id="position" name="position">
+                                        <option>Senior Doctor</option>
+                                        <option>Junior Doctor</option>
+                                        <option>Specialist</option>
+                                        <option>Consultant</option>
+                                    </select>
+                                </div>
+            
+                                <!-- Speciality -->
+                                <div class="col">
+                                    <label for="speciality">Speciality</label>
+                                    <select id="speciality" name="speciality">
+                                        <option>Cardiology</option>
+                                        <option>Neurology</option>
+                                        <option>Orthopedics</option>
+                                        <option>Dermatology</option>
+                                        <option>Pediatrics</option>
+                                    </select>
+                                </div>
+            
+                                <!-- Experience -->
+                                <div class="col-full">
+                                    <label for="experience">Experience</label>
+                                    <textarea id="experience" name="experience" rows="3" placeholder="Enter doctor's experience details"></textarea>
+                                </div>
+            
+                                <!-- Awards -->
+                                <div class="col-full">
+                                    <label for="awards">Awards</label>
+                                    <textarea id="awards" name="awards" rows="3" placeholder="List any awards or recognitions"></textarea>
+                                </div>
+            
+                                <!-- Status -->
+                                <div class="col">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status">
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                        <option>Retired</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Submit Button -->
+                        <div class="flex justify-end">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
