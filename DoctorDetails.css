@@ -36,9 +36,11 @@ body{
 .layout-default_arm_button {
     margin-right: 20px;
     padding: 10px 10px;
-    font-size: large;
-    font-weight: 500;
+    font-size: small;
+    border-radius: 8px;
+    font-weight: 600;
 }
+
 
 .layout-default_body {
     display: flex;
@@ -235,4 +237,48 @@ body{
     color: #FFD700; /* Gold color for stars */
     font-size: 18px;
 }
+
+
+/* them de co dinh cai duoi  */
+/* Cố định header */
+.layout-default_arm {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Cố định sidebar */
+.layout-default_body_header {
+    position: fixed;
+    top: 50px;
+    height: 100vh;
+    z-index: 9;
+}
+
+/* Điều chỉnh layout để tránh bị che bởi header và sidebar */
+.layout-default_body {
+    margin-top: 50px;
+    
+}
+
+/* Phần chính có thể cuộn */
+.layout-default_body_main {
+    margin-left: 15%;
+    height: calc(100vh - 50px);
+    overflow-y: auto; /* Cuộn dọc cho nội dung dài */
+    scroll-behavior: smooth; /* Hiệu ứng trượt mượt */
+}
+
+/* Ẩn thanh cuộn */
+.layout-default_body_main::-webkit-scrollbar {
+    width: 0px; /* Ẩn thanh cuộn dọc */
+}
+
+/* Làm mượt khi cuộn */
+.layout-default_body_main {
+    scrollbar-width: none; /* Ẩn thanh cuộn cho Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn cho IE và Edge */
+}
+
 
